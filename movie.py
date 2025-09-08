@@ -36,17 +36,18 @@ df.groupby("movie")["rating"].mean().plot(kind="bar", title="Average Rating by m
 plt.ylabel("Average Rating")
 plt.show()
 
-# Pie chart of average rating per product
+# Pie chart of average rating per moive
 df.groupby("movie")["rating"].mean().plot(kind="pie",autopct='%1.1f%%', title="Rating by movie")
 plt.ylabel(" ")  
 plt.show()
 
-#comparing product vs rating -scatter plot
+#comparing moive vs rating -scatter plot
 df.reset_index().plot(kind="scatter", x="index", y="rating", title="Scatter: Product Index vs Rating")
 plt.show()
 
 # Cleaned excel file created 
 df.to_excel("Cleaned_data.xlsx",index=False)
+
 
 
 
